@@ -28,6 +28,7 @@ async def verify_recaptcha(token: str | None, settings: Settings) -> bool:
         return True
 
     if not token:
+        logger.warning("Aucun token reCAPTCHA transmis avec la requête.")
         return False
 
     async with httpx.AsyncClient(timeout=5.0) as client:
@@ -37,8 +38,28 @@ async def verify_recaptcha(token: str | None, settings: Settings) -> bool:
         )
     payload = response.json()
 
-    return (
-        bool(payload.get("success"))
-        and payload.get("action") == RECAPTCHA_ACTION
-        and float(payload.get("score", 0)) >= settings.recaptcha_min_score
-    )
+    if not payload.get("success"):
+        logger.warning(
+            "Vérification reCAPTCHA refusée par Google : %s", payload.get("error-codes")
+        )
+        return False
+
+    action = payload.get("action")
+    score = float(payload.get("score", 0))
+
+
+    if action != RECAPTCHA_ACTION:
+        logger.warning(
+            "Action reCAPTCHA inattendue : %s (attendue : %s)", action, RECAPTCHA_ACTION
+        )
+        return False
+
+    if score < settings.recaptcha_min_score:
+        logger.warning(
+            "Score reCAPTCHA insuffisant : %s (seuil : %s)", score, settings.recaptcha_min_score
+        )
+        return False
+
+    return True
+
+# py
