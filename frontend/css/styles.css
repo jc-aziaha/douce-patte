@@ -838,7 +838,7 @@ footer p { margin: 0; font-size: .9rem; }
     right: 0;
     flex-direction: column;
     align-items: stretch;
-    gap: 1.1rem;
+    gap: .9rem;
     padding: 1.2rem 6%;
     background: var(--cream);
     box-shadow: 0 10px 15px rgba(0, 0, 0, .08);
