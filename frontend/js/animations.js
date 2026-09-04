@@ -67,15 +67,33 @@
   }
 
   // ----- Reveal cinématique des photographies -----
-  const photoSelectors = [
-    '.pet-card', '.about-photo', '.story-photo', '.detail-photo', '.gallery img'
-  ];
+  // Le léger zoom (scale 1.14 -> 1) déborde du cadre pendant l'animation ;
+  // sans risque pour les photos avec marge autour (hero, à-propos, services),
+  // mais la bande .gallery est en plein bord d'écran et ce débordement y
+  // provoquait un vrai scroll horizontal sur mobile (confirmé sur iPhone
+  // réel, pas un artefact d'outil de test) — cette bande garde donc un
+  // fondu simple, sans mise à l'échelle.
+  const photoSelectors = ['.pet-card', '.about-photo', '.story-photo', '.detail-photo'];
   document.querySelectorAll(photoSelectors.join(',')).forEach((img) => {
     gsap.fromTo(
       img,
       { scale: 1.14, opacity: 0, filter: 'saturate(.3) brightness(.82)' },
       {
         scale: 1,
+        opacity: 1,
+        filter: 'saturate(1) brightness(1)',
+        duration: 1.2,
+        ease: 'power3.out',
+        scrollTrigger: { trigger: img, start: 'top 90%' }
+      }
+    );
+  });
+
+  document.querySelectorAll('.gallery img').forEach((img) => {
+    gsap.fromTo(
+      img,
+      { opacity: 0, filter: 'saturate(.3) brightness(.82)' },
+      {
         opacity: 1,
         filter: 'saturate(1) brightness(1)',
         duration: 1.2,
