@@ -1,0 +1,19 @@
+{
+  "name": "douce-patte-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Site vitrine Douce Patte — frontend statique (HTML/CSS/JS natifs)",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "lightningcss-cli": "^1.27.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ]
+}
