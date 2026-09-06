@@ -826,6 +826,52 @@ footer p { margin: 0; font-size: .9rem; }
 .legal-page h2 { margin-top: 2.5rem; font-size: 1.5rem; }
 .legal-page a { color: var(--accent-text); }
 
+/* ---------- FAQ ---------- */
+.faq-list { display: grid; gap: .9rem; max-width: 820px; margin: 0 auto; }
+.faq-item {
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid rgba(var(--line-rgb), .07);
+  box-shadow: 0 1px 2px rgba(var(--shadow-rgb), .06), 0 10px 26px rgba(var(--shadow-rgb), .06);
+  overflow: hidden;
+  transition: box-shadow .18s ease;
+}
+.faq-item[open] { box-shadow: 0 2px 4px rgba(var(--shadow-rgb), .07), 0 18px 38px rgba(var(--shadow-rgb), .11); }
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 1.35rem 1.7rem;
+  cursor: pointer;
+  list-style: none;
+  font-family: Petrona, Georgia, serif;
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: -.012em;
+  color: var(--text);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary:hover { color: var(--accent-text); }
+.faq-item summary:focus-visible { outline: 3px solid var(--accent-text); outline-offset: -3px; }
+.faq-chevron { flex-shrink: 0; color: var(--accent-text); transition: transform .25s cubic-bezier(.2, .8, .3, 1); }
+.faq-item[open] .faq-chevron { transform: rotate(180deg); }
+.faq-answer { padding: 0 1.7rem 1.5rem; color: var(--muted); line-height: 1.75; }
+.faq-answer p { margin: 0 0 .7rem; }
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer ul { margin: .2rem 0 0; color: var(--muted); }
+
+.faq-groups { display: grid; gap: 3rem; }
+.faq-group-title {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
 /* ---------- mobile (point de rupture unique) ---------- */
 @media (max-width: 760px) {
   .site-header { padding: 1rem 6%; }
@@ -881,6 +927,9 @@ footer p { margin: 0; font-size: .9rem; }
   .modal-panel { padding: 2.5rem 1.6rem 2.2rem; }
 
   .main-nav .theme-toggle { margin-top: .3rem; }
+
+  .faq-item summary { padding: 1.15rem 1.2rem; font-size: 1.05rem; }
+  .faq-answer { padding: 0 1.2rem 1.2rem; }
 }
 
 /* ---------- ajustements mode sombre ---------- */

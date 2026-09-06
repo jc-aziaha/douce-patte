@@ -4,17 +4,17 @@ Site vitrine pour Manon Dubois, auto-entrepreneuse en garde et promenade d'anima
 
 Ce dossier (`6-developpement-et-tests`) contient le code du site. Les documents de cadrage sont dans les dossiers voisins du même projet local (`..\`) :
 
-- `..\2-cahier-des-charges\2b-rédaction-du-cahier-des-charges.docx` — périmètre contractuel, signé (v1.3)
-- `..\3-specifications-fonctionnelles\3a-specifications-fonctionnelles.docx` — comportement attendu, en user stories (v1.2)
-- `..\4-conception-ux-ui\4a-maquette-dapres-le-code.html` — maquette visuelle validée par la cliente (v5.0)
-- `..\5-specifications-techniques\5a-specifications-techniques.md` — choix d'implémentation (v2.2)
+- `..\2-cahier des charges\2a-redaction-du-cahier-des-charges.docx` — périmètre contractuel, signé (v1.0)
+- `..\3-specifications-fonctionnelles\3a-specifications-fonctionnelles.docx` — comportement attendu, en user stories (v3.0)
+- `..\4-conception-ux-ui\4a-maquette-douce-patte.html` — maquette visuelle validée par la cliente (à reconfirmer — voir note ci-dessous)
+- `..\5-specifications-techniques\5-specifications-techniques.md` — choix d'implémentation (v3.0)
 
 **Toujours se référer à ces documents avant de trancher un point de comportement, de contenu ou de design.** Ne pas réinterpréter le périmètre ni ajouter de fonctionnalité qui n'y figure pas.
 
 ## Résumé du projet
 
 - 5 services : promenade de chiens, visites à domicile pour chats, garde pendant les vacances, passage nourriture/eau, garde ponctuelle en journée.
-- 7 pages : Accueil, Services, À propos, Contact, Mentions légales, Politique de confidentialité, Cookies.
+- 8 pages : Accueil, Services, À propos, Questions fréquentes (FAQ), Contact, Mentions légales, Politique de confidentialité, Cookies.
 - Formulaire de contact : nom, email, téléphone, service souhaité (obligatoires), message (facultatif) → email de notification à Manon, aucune donnée stockée en base.
 - Pas de compte utilisateur, pas de CRM, pas de widget de chat.
 - Domaine : `douce-patte.fr` (réservé). Hébergement : Render. Dépôt : GitHub, sous le compte de Manon.
@@ -52,6 +52,7 @@ Détail complet et schéma de flux du formulaire : `5-specifications-techniques\
 - Rédaction à la première personne (« je »), Manon exerce seule.
 - Contraste de l'accent : `#bd4732` (~4,9:1 sur fond crème), pour rester accessible.
 - Champ message du formulaire facultatif.
+- Page FAQ : réponses repliées par défaut (accordéon), questions issues des échanges réels de Manon avec ses clients puis validées par elle, renvoi vers le formulaire de contact en fin de page pour les questions non couvertes.
 - Favicon, Open Graph et données structurées à intégrer — balises prêtes dans la maquette, page « Identité & partage ».
 
 ## Photographies
@@ -61,6 +62,14 @@ Les 6 photos actuellement dans la maquette sont des images de banque, à remplac
 ## Pages légales
 
 Les pages Mentions légales, Politique de confidentialité et Cookies de la maquette contiennent des champs entre crochets (SIRET, adresse professionnelle, hébergeur, durée de conservation) : à compléter avec les informations réelles de Manon avant mise en ligne, pas avant.
+
+## Contenu de la page FAQ
+
+La page Questions fréquentes (`frontend/faq.html`) reprend les 11 questions/réponses de la maquette, mais 4 réponses contiennent des champs entre crochets à compléter ou valider avec Manon avant mise en ligne, sur le même principe que les pages légales :
+- Secteur d'intervention : ville et rayon en kilomètres.
+- Assurance : compagnie et portée exacte de la garantie responsabilité civile professionnelle.
+- Délai de réservation conseillé en période chargée (vacances scolaires, fêtes), actuellement en semaines à préciser.
+- Nouvelles pendant l'absence du propriétaire (photo/message après chaque passage) : à n'inscrire que si Manon souhaite s'y engager systématiquement — sinon retirer la question plutôt que publier un engagement qu'elle ne tiendrait pas.
 
 ## Méthode
 
