@@ -65,11 +65,9 @@ Les pages Mentions légales, Politique de confidentialité et Cookies de la maqu
 
 ## Contenu de la page FAQ
 
-La page Questions fréquentes (`frontend/faq.html`) reprend les 11 questions/réponses de la maquette, mais 4 réponses contiennent des champs entre crochets à compléter ou valider avec Manon avant mise en ligne, sur le même principe que les pages légales :
-- Secteur d'intervention : ville et rayon en kilomètres.
-- Assurance : compagnie et portée exacte de la garantie responsabilité civile professionnelle.
-- Délai de réservation conseillé en période chargée (vacances scolaires, fêtes), actuellement en semaines à préciser.
-- Nouvelles pendant l'absence du propriétaire (photo/message après chaque passage) : à n'inscrire que si Manon souhaite s'y engager systématiquement — sinon retirer la question plutôt que publier un engagement qu'elle ne tiendrait pas.
+La page Questions fréquentes (`frontend/faq.html`) reprend les 11 questions/réponses de la maquette du 6 septembre, avec le contenu définitif validé par Manon (secteur d'intervention : Paris 19e/20e, Les Lilas, Pantin, Bagnolet, rayon ~5 km ; tarifs indicatifs ; assurance ; délais de réservation ; engagement de nouvelles avec photo après chaque passage). Plus de champs entre crochets à compléter sur cette page.
+
+La ville (« Paris ») a aussi été reportée dans le champ `addressLocality` des données structurées `LocalBusiness` (JSON-LD) de toutes les pages — auparavant `[Ville]`. Le SIRET et le téléphone affichés dans les mentions légales restent en revanche des valeurs fictives (`000 000 000 00000`, `06 05 05 05 05`) : à ne pas confondre avec une information validée, ils font toujours partie des champs à compléter avant mise en ligne (cf. section « Pages légales »).
 
 ## Méthode
 
