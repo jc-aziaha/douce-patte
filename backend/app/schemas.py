@@ -46,3 +46,30 @@ class ContactFields(BaseModel):
             value = value.strip()
             return value or None
         return value
+
+
+class ChatStatus(StrEnum):
+    ANSWERED = "answered"
+    OUT_OF_SCOPE = "out_of_scope"
+
+
+class ChatRequest(BaseModel):
+    message: str = Field(min_length=1, max_length=2000)
+
+
+class ChatResponse(BaseModel):
+    status: ChatStatus
+    message: str
+
+
+class LLMAnswer(BaseModel):
+    """Sortie attendue du modèle de génération, validée avant tout affichage.
+
+    Une sortie non conforme à ce schéma (JSON invalide, champ manquant,
+    valeur de statut inattendue) est traitée comme un échec par
+    app/services/chat.py, qui bascule alors sur le repli — jamais affichée
+    telle quelle.
+    """
+
+    status: ChatStatus
+    message: str = Field(min_length=1, max_length=1000)

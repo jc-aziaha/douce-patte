@@ -80,3 +80,25 @@ def test_rate_limit_is_scoped_per_ip(client, valid_payload, monkeypatch):
     monkeypatch.setattr(contact_router, "_client_ip", lambda request: "203.0.113.9")
 
     assert client.post("/contact", json=valid_payload).status_code == 200
+
+
+def test_rate_limit_ignores_client_supplied_leftmost_forwarded_ip(client, valid_payload):
+    """Le premier maillon de X-Forwarded-For vient du client : le falsifier
+    (une IP différente à chaque requête) ne doit pas permettre de contourner
+    la limite de débit — seul le dernier maillon (ajouté par Render) compte.
+    """
+    for i in range(5):
+        response = client.post(
+            "/contact",
+            json=valid_payload,
+            headers={"x-forwarded-for": f"203.0.113.{i}, 198.51.100.7"},
+        )
+        assert response.status_code == 200
+
+    response = client.post(
+        "/contact",
+        json=valid_payload,
+        headers={"x-forwarded-for": "203.0.113.250, 198.51.100.7"},
+    )
+
+    assert response.status_code == 429

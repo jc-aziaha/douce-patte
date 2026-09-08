@@ -1,0 +1,124 @@
+{
+  "passages": [
+    {
+      "id": "secteur",
+      "title": "Secteur d'intervention",
+      "text": "J'interviens à Paris, principalement dans les 19e et 20e arrondissements, ainsi qu'aux Lilas, à Pantin et à Bagnolet — soit un rayon d'environ 5 kilomètres autour de mon domicile. Pour confirmer si une adresse précise est couverte, le mieux est de me contacter via le formulaire de contact."
+    },
+    {
+      "id": "animaux-acceptes",
+      "title": "Animaux acceptés",
+      "text": "Je m'occupe des chiens et des chats, quel que soit leur âge ou leur taille. Je n'accueille pas les nouveaux animaux de compagnie (rongeurs, reptiles, oiseaux), faute de connaître suffisamment leurs besoins."
+    },
+    {
+      "id": "tarif-promenade",
+      "title": "Tarif — promenade de chiens",
+      "text": "À titre indicatif, une promenade d'une heure coûte 15 €. Le tarif exact dépend de votre situation et vous est confirmé par Manon après un échange via le formulaire de contact."
+    },
+    {
+      "id": "tarif-visite-chat",
+      "title": "Tarif — visite à domicile pour chats",
+      "text": "À titre indicatif, une visite à domicile pour un chat coûte 12 €. Le tarif exact est confirmé par Manon après un échange via le formulaire de contact."
+    },
+    {
+      "id": "tarif-garde-vacances",
+      "title": "Tarif — garde pendant les vacances",
+      "text": "À titre indicatif, un passage quotidien pendant une garde de vacances coûte 18 €. Le tarif exact dépend de la durée et des besoins de votre animal, et vous est confirmé par Manon après un échange via le formulaire de contact."
+    },
+    {
+      "id": "tarif-degressif",
+      "title": "Tarifs dégressifs",
+      "text": "Des tarifs dégressifs s'appliquent à partir de trois prestations par semaine. Le montant exact est toujours confirmé par Manon, en fonction de votre situation."
+    },
+    {
+      "id": "tarif-autres-services",
+      "title": "Tarif — passage nourriture/eau et garde ponctuelle en journée",
+      "text": "Il n'existe pas de tarif indicatif publié pour le passage nourriture/eau et la garde ponctuelle en journée : ces prestations sont chiffrées au cas par cas. Décrivez votre besoin via le formulaire de contact pour recevoir une proposition précise, sans engagement."
+    },
+    {
+      "id": "assurance",
+      "title": "Assurance",
+      "text": "Mon activité est déclarée en auto-entreprise et couverte par une assurance responsabilité civile professionnelle souscrite auprès d'un assureur spécialisé dans les métiers animaliers. Elle couvre les dommages que je pourrais causer chez vous pendant une prestation, ainsi que ceux qu'un animal dont j'ai la garde pourrait causer à un tiers. L'attestation est disponible sur simple demande."
+    },
+    {
+      "id": "premier-contact",
+      "title": "Première prise de contact",
+      "text": "Vous m'écrivez via le formulaire de contact ou par téléphone en me décrivant votre besoin. Je vous réponds rapidement, et nous convenons d'une première rencontre chez vous, avec votre animal, pour connaître ses habitudes."
+    },
+    {
+      "id": "lieu-garde",
+      "title": "Lieu de la garde",
+      "text": "Je garde les animaux chez vous, et non chez moi. Votre animal reste dans son environnement, avec ses repères, ses odeurs et son rythme — c'est ce qui le perturbe le moins pendant votre absence."
+    },
+    {
+      "id": "delai-reservation",
+      "title": "Délais de réservation",
+      "text": "Pour une promenade ou une visite ponctuelle, deux à trois jours suffisent généralement. Pour une garde pendant les vacances scolaires, en août ou autour des fêtes de fin d'année, mieux vaut prévoir trois à quatre semaines : ce sont les périodes où le planning se remplit le plus vite. Je n'ai pas d'accès à un agenda en temps réel : pour toute question de disponibilité, le formulaire de contact permet d'avoir une réponse précise et à jour."
+    },
+    {
+      "id": "cles",
+      "title": "Remise des clés",
+      "text": "Les clés sont récupérées lors de la première rencontre, ou juste avant votre départ, selon ce qui vous arrange. Elles sont conservées sans mention de votre adresse et vous sont restituées à votre retour."
+    },
+    {
+      "id": "traitement-medical",
+      "title": "Traitement médical",
+      "text": "Un animal suivant un traitement n'est pas un problème, à condition que l'administration reste simple (comprimé, gouttes, alimentation adaptée). Ce point se prépare lors de la première rencontre, avec des consignes écrites laissées par vos soins."
+    },
+    {
+      "id": "urgence-veterinaire",
+      "title": "Urgence vétérinaire",
+      "text": "En cas d'urgence vétérinaire, je vous contacte immédiatement. Si vous êtes injoignable et que la situation le demande, j'emmène votre animal chez le vétérinaire dont vous m'aurez laissé les coordonnées, ou chez le service d'urgence le plus proche."
+    },
+    {
+      "id": "nouvelles-absence",
+      "title": "Nouvelles pendant votre absence",
+      "text": "Après chaque passage, j'envoie un court message accompagné d'une photo : ce qu'on a fait, comment l'animal s'est comporté, et tout ce qui mérite d'être signalé. Si vous préférez ne pas être dérangé, il suffit de le préciser : dans ce cas, je n'écris qu'en cas de besoin."
+    },
+    {
+      "id": "service-promenade-chiens",
+      "title": "Service — Promenade de chiens",
+      "text": "Une sortie individuelle pour que le chien se dépense, découvre son quartier et profite du grand air. Les promenades peuvent être ponctuelles ou régulières, avec une durée adaptée à son énergie."
+    },
+    {
+      "id": "service-visite-chats",
+      "title": "Service — Visite à domicile pour chats",
+      "text": "Le chat conserve ses repères pendant votre absence : repas, eau, litière, jeux, câlins et observation de son bien-être, avec le respect des petites consignes laissées."
+    },
+    {
+      "id": "service-garde-vacances",
+      "title": "Service — Garde pendant les vacances",
+      "text": "Pour un week-end, des vacances ou un déplacement imprévu, des passages réguliers sont organisés au domicile, sur toute la durée de l'absence, selon un planning défini avant le départ."
+    },
+    {
+      "id": "service-passage-nourriture",
+      "title": "Service — Passage nourriture/eau",
+      "text": "Un passage court et fiable pour les repas et l'eau fraîche, adapté aux absences de courte durée."
+    },
+    {
+      "id": "service-garde-journee",
+      "title": "Service — Garde ponctuelle en journée",
+      "text": "Pour une journée de travail chargée ou un imprévu, l'animal est gardé quelques heures dans la journée, dans un cadre rassurant."
+    },
+    {
+      "id": "qui-est-manon",
+      "title": "Qui est Manon",
+      "text": "Manon Dubois a fondé Douce Patte pour offrir aux chiens et chats de son quartier une présence attentive quand leurs propriétaires ne peuvent pas être là. Elle se déplace directement chez vous, dans le respect de vos habitudes et de celles de votre compagnon. Son activité est déclarée en auto-entreprise."
+    },
+    {
+      "id": "contact-coordonnees",
+      "title": "Comment contacter Manon",
+      "text": "Le plus simple est le formulaire de contact du site, qui permet de décrire votre besoin et d'obtenir une réponse personnalisée et sans engagement. Un contact direct par e-mail ou par téléphone est aussi possible, coordonnées disponibles sur la page Contact."
+    },
+    {
+      "id": "moyens-paiement",
+      "title": "Moyens de paiement",
+      "text": "Les prestations se règlent en espèces, par virement ou par chèque emploi service universel (CESU)."
+    },
+    {
+      "id": "urgence-jour-meme",
+      "title": "Demande urgente le jour même",
+      "text": "Une demande urgente pour le jour même est étudiée au cas par cas, sans confirmation ni exclusion de disponibilité à l'avance : la meilleure façon d'avoir une réponse rapide est le formulaire de contact ou un appel téléphonique direct."
+    }
+  ]
+}

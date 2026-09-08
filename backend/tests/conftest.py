@@ -49,3 +49,16 @@ def reset_rate_limit():
     contact_router._request_log.clear()
     yield
     contact_router._request_log.clear()
+
+
+@pytest.fixture(autouse=True)
+def reset_chat_state():
+    """Isole chaque test de l'état de module du chatbot (débit, plafond quotidien)."""
+    from app.routers import chat as chat_router
+    from app.services import chat as chat_service
+
+    chat_router._request_log.clear()
+    chat_service.reset_daily_usage_for_tests()
+    yield
+    chat_router._request_log.clear()
+    chat_service.reset_daily_usage_for_tests()

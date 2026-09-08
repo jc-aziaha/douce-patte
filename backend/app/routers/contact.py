@@ -25,9 +25,15 @@ _request_log: dict[str, list[float]] = defaultdict(list)
 
 
 def _client_ip(request: Request) -> str:
+    # Le premier maillon de X-Forwarded-For est fourni par le client et donc
+    # falsifiable à volonté (il suffit d'envoyer son propre en-tête pour
+    # changer d'« IP » à chaque requête et contourner la limite de débit).
+    # Render n'ajoute qu'un seul relais devant l'application : c'est le
+    # DERNIER maillon, que le client ne peut pas usurper, qui reflète l'IP
+    # réellement observée par ce relais.
     forwarded = request.headers.get("x-forwarded-for")
     if forwarded:
-        return forwarded.split(",")[0].strip()
+        return forwarded.split(",")[-1].strip()
     return request.client.host if request.client else "unknown"
 
 

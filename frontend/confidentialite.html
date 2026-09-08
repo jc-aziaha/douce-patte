@@ -74,6 +74,12 @@
   <h2>Destinataires et conservation</h2>
   <p>Seule Manon Dubois accède au contenu des demandes. Deux sous-traitants interviennent techniquement&nbsp;: un prestataire d&#8217;envoi d&#8217;e-mails (Brevo, société française) pour acheminer le message, et Google reCAPTCHA pour protéger le formulaire des soumissions automatisées. Les demandes sans suite sont conservées 12 mois, puis supprimées.</p>
 
+  <h2>Assistant conversationnel (chatbot)</h2>
+  <p>Le site propose un assistant automatisé pour répondre aux questions courantes. Il ne s&#8217;agit pas de Manon&nbsp;: c&#8217;est un programme qui s&#8217;appuie sur le contenu déjà publié sur le site pour formuler ses réponses, sans jamais confirmer de disponibilité réelle ni de tarif définitif.</p>
+  <p>Pour comprendre votre question et rédiger sa réponse, l&#8217;assistant transmet votre message à un sous-traitant supplémentaire&nbsp;: <strong>Google (API Gemini)</strong>, société américaine. Votre message est donc transféré aux États-Unis.</p>
+  <p>Ce service étant utilisé sur son palier gratuit, Google indique pouvoir utiliser le contenu transmis (votre question et la réponse générée) pour fournir, améliorer et développer ses propres produits, et que ce contenu peut être consulté par des relecteurs humains chez Google à cette fin. Nous vous invitons à ne pas indiquer de données sensibles dans le champ de discussion de l&#8217;assistant&nbsp;; pour toute demande précise, le formulaire de contact reste le canal recommandé.</p>
+  <p>Aucune conversation n&#8217;est conservée de notre côté&nbsp;: ni sur le serveur, ni d&#8217;une visite à l&#8217;autre dans votre navigateur. Le journal technique de l&#8217;assistant ne contient que des métadonnées (statut de la réponse, latence), jamais le texte de vos questions.</p>
+
   <h2>Vos droits</h2>
   <p>Vous pouvez demander l&#8217;accès, la rectification, l&#8217;effacement ou la limitation de vos données en écrivant à contact@douce-patte.fr. Vous pouvez aussi introduire une réclamation auprès de la CNIL.</p>
 </section>
@@ -102,5 +108,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="/js/main.js" defer></script>
 <script src="/js/animations.js" defer></script>
+<script src="/js/config.js" defer></script>
+<script src="/js/chat.js" defer></script>
 </body>
 </html>
