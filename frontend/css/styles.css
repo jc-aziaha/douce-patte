@@ -1146,16 +1146,19 @@ footer p { margin: 0; font-size: .9rem; }
     bottom: calc(.8rem + env(safe-area-inset-bottom, 0px));
   }
   .chat-panel {
-    position: fixed;
-    top: auto;
-    left: .6rem;
-    right: .6rem;
-    bottom: calc(.6rem + env(safe-area-inset-bottom, 0px));
-    width: auto;
+    /* Continue de flotter au-dessus de la bulle, comme sur desktop (hérite
+       de position:absolute + bottom:calc(100% + 14px) de la règle de base) :
+       le bord droit reste aligné sur la bulle (right:0, marge ~.8rem, non
+       modifiée ici), et la largeur fixe la marge gauche à ~1.7rem — mesurée
+       au pixel près sur la référence fournie (27px de marge à gauche contre
+       14px à droite sur une capture de 326px de large, soit près du double).
+       Hauteur ~52% de la hauteur visible, à l'image de la référence.
+       Reste une carte posée sur la page, pas un panneau plein écran. */
+    width: calc(100vw - 2.5rem);
     max-width: none;
-    height: 70vh;
-    height: 70dvh;
-    max-height: none;
+    height: min(52dvh, 480px);
+    max-height: 52vh;
+    max-height: 52dvh;
   }
 }
 :root[data-theme="dark"] .steps li { border-top-color: rgba(215, 145, 132, .3); }
