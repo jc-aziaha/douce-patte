@@ -11,10 +11,10 @@
   ];
 
   const WELCOME_MESSAGE =
-    "Bonjour ! Je suis l'assistant automatisé du site Douce Patte. Je peux répondre aux " +
-    'questions courantes (secteur, tarifs indicatifs, moyens de paiement, organisation ' +
-    "d'une garde...). Je ne confirme en revanche jamais de disponibilité réelle ni de tarif " +
-    "définitif : pour ça, le formulaire de contact reste la meilleure option.";
+    "Bonjour ! Je suis l'assistant automatisé du site Douce Patte. Je réponds uniquement " +
+    'en français, aux questions courantes (secteur, tarifs indicatifs, moyens de paiement, ' +
+    "organisation d'une garde...). Je ne confirme en revanche jamais de disponibilité réelle " +
+    'ni de tarif définitif : pour ça, le formulaire de contact reste la meilleure option.';
 
   const NETWORK_FALLBACK_MESSAGE =
     "Je ne peux pas vous répondre pour le moment. Merci d'utiliser le formulaire de " +
@@ -158,7 +158,6 @@
     const bubble = el('div', 'chat-message chat-message-bot');
     if (status === 'out_of_scope') {
       bubble.classList.add('is-out-of-scope');
-      bubble.appendChild(el('span', 'chat-message-out-of-scope-label', 'À confirmer avec Manon'));
     }
     bubble.appendChild(document.createTextNode(text));
     messages.appendChild(bubble);

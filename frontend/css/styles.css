@@ -1034,15 +1034,6 @@ footer p { margin: 0; font-size: .9rem; }
   border-bottom-left-radius: 4px;
 }
 .chat-message-bot.is-out-of-scope { background: var(--sand); border: 1px dashed rgba(189, 71, 50, .45); }
-.chat-message-out-of-scope-label {
-  display: block;
-  margin-bottom: .3rem;
-  font-size: .7rem;
-  font-weight: 800;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--accent-text);
-}
 .chat-message-system {
   align-self: center;
   max-width: 100%;
