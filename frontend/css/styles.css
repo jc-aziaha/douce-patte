@@ -966,6 +966,7 @@ footer p { margin: 0; font-size: .9rem; }
   max-width: calc(100vw - 2.4rem);
   height: 560px;
   max-height: 72vh;
+  max-height: 72dvh; /* tient compte de la barre d'adresse mobile (repli sur vh si dvh n'est pas supporté) */
   display: flex;
   flex-direction: column;
   background: var(--surface);
@@ -1132,14 +1133,29 @@ footer p { margin: 0; font-size: .9rem; }
   .chat-typing span { animation: none; opacity: .8; }
 }
 
+/* Tablette (761–1024px, cf. spécifications fonctionnelles §9.2) : le panneau
+   flottant reste, mais sur une largeur qui s'adapte plutôt qu'une constante
+   fixe pensée pour desktop. */
+@media (min-width: 761px) and (max-width: 1024px) {
+  .chat-panel { width: min(420px, calc(100vw - 3rem)); }
+}
+
 @media (max-width: 760px) {
-  .chat-widget { right: .8rem; bottom: .8rem; }
+  .chat-widget {
+    right: .8rem;
+    bottom: calc(.8rem + env(safe-area-inset-bottom, 0px));
+  }
   .chat-panel {
     position: fixed;
-    inset: auto .6rem .6rem .6rem;
+    top: auto;
+    left: .6rem;
+    right: .6rem;
+    bottom: calc(.6rem + env(safe-area-inset-bottom, 0px));
     width: auto;
     max-width: none;
-    height: min(74vh, 560px);
+    height: 70vh;
+    height: 70dvh;
+    max-height: none;
   }
 }
 :root[data-theme="dark"] .steps li { border-top-color: rgba(215, 145, 132, .3); }
