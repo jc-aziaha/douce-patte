@@ -1104,7 +1104,9 @@ footer p { margin: 0; font-size: .9rem; }
   border: 1px solid var(--input-border);
   border-radius: 12px;
   padding: .6rem .8rem;
-  font: 400 .92rem Nunito, sans-serif;
+  /* 1rem (16px) minimum : en dessous, Safari/Chrome sur mobile zoome
+     automatiquement à la mise au point du champ, ce qui perd le visiteur. */
+  font: 400 1rem Nunito, sans-serif;
   color: var(--text);
   background: var(--cream);
 }
